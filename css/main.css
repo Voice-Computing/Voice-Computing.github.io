@@ -1,0 +1,542 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-position: center;
+}
+
+/*------background image----*/
+
+
+main img {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,1),50%,rgba(0,0,0,0)), url("../images/shutterstock_664134502-1-1080x561.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+html, body {
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+main {
+    flex: 1;
+}
+
+
+
+nav {
+    display: flex;
+    padding: 1% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    height: 120px;
+    border-radius: 2px;
+    padding-top: 10px;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: rgb(239, 234, 234);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-item {
+    display: none;
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-item {
+    display: block;
+}
+
+
+.text-box {
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1 {
+    font-size: 28px;
+}
+.text-box p {
+    margin: 10px 0 20px;
+    font-size: 16px;
+    color: white;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color:black;
+    border: 1px solid whitesmoke;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover {
+   border: solid 1px black;
+   transition: 1s;
+   background-color: rgb(153, 206, 232);
+}
+nav .fa{
+    display: none;
+}
+
+
+/*---------icons-----*/
+
+
+
+    .icon ul i {
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(47, 131, 75);
+      }
+    
+      i {
+        font-size: 13px; /* Adjust the icon size as needed */
+        margin-right: 10px; /* Adjust the spacing between the icon and text */
+        display: inline-block; /* Ensures the icon doesn't break onto a new line */
+      }
+    
+      h1 {
+        margin: 0;
+        display: inline; /* Ensures the text and icon are on the same line */
+      }
+
+
+
+
+/*for all media screens*/
+
+
+
+@media(max-width: 700px) {
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background-color: rgb(13, 12, 10);
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1.0s;
+    }
+    nav .fa{
+        display: block;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+
+}
+/*--------projects-------*/
+
+
+
+ .projects {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 230px;
+
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+p{
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    color: black;
+    line-height: 14px;
+    padding: 10px;
+}
+.row{
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.projects-col{
+    flex-basis: 30%;
+    background: rgba(232, 232, 236, 0.982);
+    border-radius: 10px;
+    margin-bottom: 6%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+h4{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: black;
+}
+.projects-col:hover {
+    box-shadow: 0 0 20px 0px rgb(92, 146, 221);
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+/*--------capabilities-------*/
+
+
+.capabilities{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.left-paragraph{
+    text-align: left;
+}
+
+.capabilities img{
+    width: 80%;
+    margin: auto;
+    background-position: right;
+    background-image: url("/images/voice_recognition_virtual_assistant_artificial_intelligence_ai_thinkstock_889309652-100749545-large.jpg");
+    float: right; /* Float the image to the right */
+    margin: 0 0 10px 10px; /* Add some margin for spacing */
+      
+
+}
+
+/*--------products-------*/
+
+.products {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 130px;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+.products img{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    background-position: center;
+    background-size: cover;
+
+}
+.products footer{
+    top: 300px;
+
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.products p{
+
+    font-size: 16px; /* Set the font size to 16 pixels */
+    color: black;    /* Set the text color to dark gray */
+    margin: 6px 0;  /* Add a 10-pixel top and bottom margin for spacing */
+    line-height: 1.0; /* Set the line height to 1.5 times the font size for readability */
+    font-family: Arial, sans-serif;
+    margin-bottom: 130px;
+
+   
+}
+
+
+/*--------contact us------*/
+
+.cta{
+    margin: 80px auto;
+    height: 3;
+    width: 30%;
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta h1{
+    color: black;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.cta  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/*form*/
+
+.form{
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+    .error-message {
+        color: #FF0000;
+        margin-bottom: 16px;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    
+
+    
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+/*------Map-------*/
+
+    .section {
+
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .map {
+        max-width: 100%;
+        height: 250px; /* Adjust the height as needed */
+        border: 0;
+        margin: 0; padding: 0;
+        margin-bottom: 5%;
+    }
+
+
+/*------About us------*/
+
+
+.aboutus{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 130px;
+    background-size: cover;
+    
+}
+.aboutus h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.aboutus p{
+    font-size: 16px; /* Set the font size to 16 pixels */
+    color: black;    /* Set the text color to dark gray */
+    margin: 6px 0;  /* Add a 10-pixel top and bottom margin for spacing */
+    line-height: 1.0; /* Set the line height to 1.5 times the font size for readability */
+    font-family: Arial, sans-serif;
+    margin-bottom: 130px;
+    text-shadow: #333;
+
+}
+.aboutus img{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    background-position: center;
+    background-size: cover;
+}
+
+/*-------footer-------*/
+
+footer {
+    background-color: #333; /* Choose your desired background color */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 130px;
+}
+
+footer {
+    background-color: #333;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer div{
+    flex: 1;
+    margin: 30px;
+    max-width: 250px;
+}
+.footer div h2{
+    font-weight: 300;
+    margin-bottom: 80px;
+    letter-spacing: 1px;
+}
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.col-2 p{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.col-3 a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.fa-brands .col-3 {
+    color: blue;
+}
+
+.icons {
+    color: black;
+}
+
+.instagram {
+    color: pink;
+}
+
+.col-4 p{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    footer div {
+        flex: 1 0 100%;
+        margin: 10px 0;
+    }
+}
+
