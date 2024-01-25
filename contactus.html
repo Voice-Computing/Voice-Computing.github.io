@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Computing website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9d1f54849f.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header style="background-color: black;">
+        <nav>
+
+            <!------Logo------>
+
+            <a href="index.html"><img src="images/th (3).jpg"></a>
+            <div class="nav-links" id="navLinks">
+
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+
+                <!---------list-------->
+
+                <Ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
+                    <li><a href="aboutus.html"><i class="fa-regular fa-address-card"></i>ABOUT US</a></li>
+                    <li><a href="capabilities.html"><i class="fa-solid fa-users-gear"></i>CAPABILITIES</a></li>
+                    <li><a href="projects.html"><i class="fa-solid fa-list-check"></i>PROJECTS</i></a></li>
+                    <li><a href="products.html"><i class="fa-brands fa-product-hunt"></i>PRODUCTS</a></li>
+                    <li><a href="contactus.html"><i class="fa-solid fa-phone"></i>CONTACT US</a></li>
+                </Ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </header>
+    <main>            
+    
+
+    <form id="contactForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <button type="button" onclick="validateAndSubmit()">Send Email</button>
+    </form>
+
+    <script>
+        function validateAndSubmit() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+            var errorMessage = document.getElementById("errorMessage");
+
+            errorMessage.innerHTML = "";
+
+            if (name.trim() === "" || email.trim() === "" || subject.trim() === "" || message.trim() === "") {
+                errorMessage.innerHTML = "All fields are required.";
+                return;
+            }
+
+            // You can add more validation logic here if needed
+
+            // Send email using mailto
+            var mailtoLink = "mailto:voicecomputingwebsite@gmail.com" +
+                "?subject=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+
+
+    <section class="map">
+        <h1>Contact Us</h1>
+
+        <!-- Your contact form or contact information goes here -->
+
+        <h3>Location</h3>
+        <!-- Paste the copied Google Maps Embed API code here -->
+        <iframe
+
+           width="100%"
+           height="100%"
+           frameborder="0"
+           style="border: 0;"
+           src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d57499.058686721!2d28.233890592351578!3d-25.747724692986722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x1e95606983f7f34b%3A0x411905d566e2cd32!2sCouncil%20for%20Scientific%20and%20Industrial%20Research%20(CSIR)%2C%20Meiring%20Naud%C3%A9%20Rd%2C%20Brummeria%2C%20Pretoria%2C%200184!3m2!1d-25.7478078!2d28.2750904!5e0!3m2!1sen!2sza!4v1699955270057!5m2!1sen!2sza"
+           allowfullscreen>
+
+        </iframe>
+
+    </section>
+    </main>
+    
+    <footer>
+
+        <div class="col-1">
+
+            <h2>Company</h2>
+            <a href="aboutus.html">About</a>
+            <a href="capabilities.html">Capabilities</a>
+            <a href="projects.html">Projects</a>
+            <a href="products.html">Products</a>
+            <a href="contactus.html">Contact</a>
+        </div>
+
+        <div class="col-2">
+
+            <h2>Contact Us</h2>
+            <p>Email: info@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+
+        <div class="col-3">
+
+            <h2>Follow Us</h2>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+            <a href="#"><i class="fa-brands fa-x-twitter icons"></i>Twitter</a>
+            <a href="#"><i class="fa-brands fa-instagram" ></i>Instagram</a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp"></i>WhatsApp</a>
+
+        </div>
+
+        <div class="col-4">
+
+            <h2>Address</h2>
+            <p> CSIR Pretoria Campus<br></br>
+                Meiring Naude Road<br></br>
+                Brummeria<br></br>
+                Pretoria<br></br>
+                Building 43
+                </p>
+
+        </div>
+
+            
+    </footer> 
+
+</body>
+</html>
+           
+ 

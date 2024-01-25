@@ -9,23 +9,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/9d1f54849f.js" crossorigin="anonymous"></script>
-
     
 </head>
 <body>
-
     <header style="background-color: black;">
         <nav>
-    
+
             <!------Logo------>
-        
+
             <a href="index.html"><img src="images/th (3).jpg"></a>
             <div class="nav-links" id="navLinks">
-    
+
                 <i class="fa fa-times-circle" onclick="hideMenu()"></i>
-    
+
                 <!---------list-------->
-    
+
                 <Ul>
                     <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
                     <li><a href="aboutus.html"><i class="fa-regular fa-address-card"></i>ABOUT US</a></li>
@@ -34,55 +32,61 @@
                     <li><a href="products.html"><i class="fa-brands fa-product-hunt"></i>PRODUCTS</a></li>
                     <li><a href="contactus.html"><i class="fa-solid fa-phone"></i>CONTACT US</a></li>
                 </Ul>
-                
+
+
             </div>
-    
+
             <i class="fa fa-bars" onclick="showMenu()"></i>
 
-            
-    
         </nav>
     </header>
-
-
     <main>
 
-        <!---------background image-------->
-
-        <a href="index.html"><img src="images/shutterstock_664134502-1-1080x561.jpg"></a>
+                <!------------projects-------->
 
 
-        <!---------text box-------->
+                <section class="projects" id="projects">
+                    <h1>Projects we offer</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    <!-----<a href="index.html"><img src="images/495359-popular-white-desktop-background-1920x1080-images.jpg"></a>------>
+            
+                    <div class="row">
+                        <div class="projects-col">
+                            <h4>Past projects</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos repudiandae accusamus nisi quod possimus,</p>
+            
+                        </div>
+                        <div class="projects-col">
+                            <h4>Current projects</h4>
+                            <p>Project Name
+                                Funder
+                                Ngiyaqonda! Applying Voice Computing Technology to Language Literacy
+                                Department of Sport, Arts and Culture (DSAC)
+                                Automation of Transcriptions of Audio-Recorded Qualitative Research In-depth Interviews
+                                African Health Research Institute (AHRI)
+                                ASR for ATNS ROAST System
+                                Sparcx (Pty) Ltd
+                                Data Harvesting Phase II
+                                South African Centre for Digital Language Resources (SADiLaR)
+                                Audit on Language Resources at Higher Education Institutions
+                                South African Centre for Digital Language Resources (SADiLaR)
+                                Enabling Localised Language Technology Applications Phase II: Developing Nguni
+                                computational grammars and resources
+                                South African Centre for Digital Language Resources (SADiLaR)
+                                
+                                </p>
+            
+                        </div>
+                        <div class="projects-col">
+                            <h4>Future projects</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos repudiandae accusamus nisi quod possimus,</p>
+            
+                        </div>
+            
+                    </div>
+                </section>
 
-
-        <div class="text-box">
-
-            <h1>Voice Computing Research Group</h1>
-            <p>Developing hardware and software to process voice inputs</p>
-            <a href="contactus.html" class="hero-btn">Contact Us</a>
-        
-        </div>
-
-
-    <!-----------javascript for toggle menu-------->
-        
-        <script>
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.right = "0";
-            }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
-            }
-        </script>
-
-
-
-    </main>
-
-
-
-
+    </main>  
     <footer>
 
         <div class="col-1">
@@ -90,7 +94,7 @@
             <h2>Company</h2>
             <a href="aboutus.html">About</a>
             <a href="capabilities.html">Capabilities</a>
-            <a href="products.html">Projects</a>
+            <a href="projects.html">Projects</a>
             <a href="products.html">Products</a>
             <a href="contactus.html">Contact</a>
         </div>
@@ -122,9 +126,15 @@
                 Building 43</p>
             
         </div>
-       
-    </footer>
+
+
+    </footer> 
+
+            
+
+    
 </body>
-
-
 </html>
+       
+
+ 
