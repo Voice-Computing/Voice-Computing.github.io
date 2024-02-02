@@ -57,27 +57,16 @@ window.addEventListener('scroll', function() {
     function toggleText() {
         var additionalText = document.getElementById("additionalText");
         var readMoreBtn = document.querySelector('.read-more');
-        var readLessBtn = document.querySelector('.read-less');
 
         if (additionalText.style.display === "none") {
             // Display additional text
             additionalText.style.display = "block";
-            readMoreBtn.style.display = "none";
-            readLessBtn.style.display = "inline";
+            readMoreBtn.innerText = "Read Less";
         } else {
             // Hide additional text
             additionalText.style.display = "none";
-            readMoreBtn.style.display = "inline";
-            readLessBtn.style.display = "none";
+            readMoreBtn.innerText = "Read More";
         }
-    }
-
-    function scrollToAdditionalText() {
-        var additionalText = document.getElementById("additionalText");
-        var yOffset = -5000; // Adjust the yOffset as needed
-        var y = additionalText.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-        window.scrollTo({ top: y, behavior: 'smooth' });
     }
 </script>
 
@@ -124,6 +113,7 @@ window.addEventListener('scroll', function() {
 
         <div class="text-content">
             <h1>Capabilities</h1>
+            <h2>ASR (Automatic Speech Recognition)<h2>
             <p>
                 There are four micro teams within the Voice Computing Research Group, namely, ASR, TTS, CNLP, HCI & Accessibility.<br><br>
                 
@@ -136,7 +126,6 @@ window.addEventListener('scroll', function() {
 
 
                 <button class="read-more" onclick="toggleText()">Read More</button>
-                <button class="read-less" onclick="toggleText()">Read Less</button>
         
         </div>
 
