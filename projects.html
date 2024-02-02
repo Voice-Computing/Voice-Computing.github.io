@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Computing website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9d1f54849f.js" crossorigin="anonymous"></script>
+
+<script>
+    function showMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").classList.remove("show");
+    }
+</script>
+
+<!--------back to top button------->
+
+
+<a href="#" id="backToTopBtn">Back to Top</a>
+
+<script>
+    // Implement a function to scroll back to the top smoothly
+    document.getElementById('backToTopBtn').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Add this script to your existing JavaScript
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var backToTopBtn = document.getElementById('backToTopBtn');
+
+    // Show the button when scrolled down, hide it when at the top
+    if (scrollPosition > 200) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+</script>
+ 
+</head>
+<body>
+    <header style="background-color: black;">
+        <nav>
+
+            <!------Logo------>
+
+            <a href="index.html"><img src="images/CSIR Final_logo.png"></a>
+            <div class="nav-links" id="navLinks">
+
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+
+                <!---------list-------->
+
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
+                    <li><a href="aboutus.html"><i class="fa-regular fa-address-card"></i>ABOUT US</a></li>
+                    <li><a href="capabilities.html"><i class="fa-solid fa-users-gear"></i>CAPABILITIES</a></li>
+                    <li><a href="projects.html"><i class="fa-solid fa-list-check"></i>PROJECTS</a>
+                    <li><a href="products.html"><i class="fa-brands fa-product-hunt"></i>PRODUCTS</a></li>
+                    <li><a href="contactus.html"><i class="fa-solid fa-phone"></i>CONTACT US</a></li>
+                </ul>
+
+
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </header>
+    <main>
+
+                <!------------projects-------->
+
+                <div class="heading">
+                    <h1>Projects</h1>
+                    <p>Computing Research Group Projects</p>
+                </div>
+
+                    <div class="row">
+                        <div class="projects-col">
+                            <h4>Past projects</h4>
+                            <p>Coming soon</p>
+            
+                        </div>
+                        <div class="projects-col">
+                            <h4>Current projects</h4>
+                            <p>
+                                Funder
+                                Ngiyaqonda!<br><br> Applying Voice Computing Technology to Language Literacy
+                                Department of Sport, Arts and Culture (DSAC)
+                                Automation of Transcriptions of Audio-Recorded Qualitative Research In-depth Interviews
+                                African Health Research Institute (AHRI)
+                                ASR for ATNS ROAST System
+                                Sparcx (Pty) Ltd
+                                Data Harvesting Phase II
+                                South African Centre for Digital Language Resources (SADiLaR)
+                                Audit on Language Resources at Higher Education Institutions
+                                South African Centre for Digital Language Resources (SADiLaR)
+                                Enabling Localised Language Technology Applications Phase II: Developing Nguni
+                                computational grammars and resources
+                                South African Centre for Digital Language Resources (SADiLaR)
+                                
+                                </p>
+            
+                        </div>
+                        <div class="projects-col">
+                            <h4>Future projects</h4>
+                            <p>Coming soon</p>
+            
+                        </div>
+            
+                    </div>
+                </section>
+
+    </main>  
+    <footer>
+
+        <div class="col-1">
+
+            <h2>Company</h2>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="capabilities.html">Capabilities</a>
+            <a href="projects.html">Projects</a>
+            <a href="products.html">Products</a>
+            <a href="contactus.html">Contact</a>
+        </div>
+
+        <div class="col-2">
+
+            <h2>Contact Us</h2>
+            <p>Email: agovender1@csir.co.za</p>
+            <p>Telephone number: 012 841 3028</p>
+        </div>
+
+        <div class="col-3">
+
+            <h2>Follow Us</h2>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+            <a href="#"><i class="fa-brands fa-x-twitter icons"></i>Twitter</a>
+            <a href="#"><i class="fa-brands fa-instagram" ></i>Instagram</a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp"></i>WhatsApp</a>
+
+        </div>
+
+        <div class="col-4">
+
+            <h2>Address</h2>
+            <p> CSIR Pretoria Campus<br></br>
+                Meiring Naude Road<br></br>
+                Brummeria<br></br>
+                Pretoria<br></br>
+                Building 43</p>
+            
+        </div>
+
+
+    </footer> 
+
+    <!---------Dropdoun menu function------>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var projectsDropdown = document.getElementById('projectsDropdown');
+
+        // Toggle the 'show' class when clicking on the "Projects" link
+        document.querySelector('.nav-links li a[href="projects.html"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            projectsDropdown.classList.toggle('show');
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.addEventListener('click', function (e) {
+            if (!e.target.matches('.nav-links li a[href="projects.html"]')) {
+                projectsDropdown.classList.remove('show');
+            }
+        });
+    });
+</script>
+
+
+
+            
+
+    
+</body>
+</html>
+       
+
+ 

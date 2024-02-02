@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Computing website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9d1f54849f.js" crossorigin="anonymous"></script>
+
+
+<script>
+    function showMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").classList.remove("show");
+    }
+</script>
+
+<!--------back to top button------->
+
+
+<a href="#" id="backToTopBtn">Back to Top</a>
+
+<script>
+    // Implement a function to scroll back to the top smoothly
+    document.getElementById('backToTopBtn').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Add this script to your existing JavaScript
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var backToTopBtn = document.getElementById('backToTopBtn');
+
+    // Show the button when scrolled down, hide it when at the top
+    if (scrollPosition > 200) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+</script>
+
+    
+</head>
+<body>
+    <header style="background-color: black;">
+        <nav>
+
+            <!------Logo------>
+
+            <a href="index.html"><img src="images/CSIR Final_logo.png"></a>
+            <div class="nav-links" id="navLinks">
+
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+
+                <!---------list-------->
+
+                <Ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
+                    <li><a href="aboutus.html"><i class="fa-regular fa-address-card"></i>ABOUT US</a></li>
+                    <li><a href="capabilities.html"><i class="fa-solid fa-users-gear"></i>CAPABILITIES</a></li>
+                    <li><a href="projects.html"><i class="fa-solid fa-list-check"></i>PROJECTS</i></a></li>
+                    <li><a href="products.html"><i class="fa-brands fa-product-hunt"></i>PRODUCTS</a></li>
+                    <li><a href="contactus.html"><i class="fa-solid fa-phone"></i>CONTACT US</a></li>
+                </Ul>
+
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </header>
+    <main>
+
+             <!------------Products------->
+
+             <div class="heading">
+                <h1>Products</h1>
+                <p>Computing Research Group Products</p>
+            </div>
+
+            <div class="text-content">
+                <h1>Capabilities</h1>
+
+
+                <p>Qfrency
+                    Our text-to-speech (TTS) system creates human-like voices from written text for the South African market.<br><br> These synthetic voices can say and read anything in South African languages, on a wide range of devices and platforms, for industry, developers and individuals.<br><br>
+                    For more information, please visit qfrency.com 
+                    iSinkwe,
+                    ISinkwe is an app that adds and synchronises human-narrated or computer-generated audio to text. The text can be written in any of the 11 official written languages of South Africa.<br><br> Publishers, schools and private individuals can use iSinkwe to create more accessible books, class notes and other documents, in order to open up the world of reading and learning to everyone.
+                    For more information, please isinkwe.com
+                    </p>
+
+            </div>
+
+            <div class="picture-qfrency">
+                <img src="images/Qfrency.png" alt="Isinkwe logo">
+            </div>
+
+            <div class="picture-Isinkwe">
+                <img src="images/Isinkwe-logo-white-72dpi.jpg" alt="Isinkwe logo">
+            </div>
+
+            
+
+
+    </main>
+
+
+        <footer>
+
+            <div class="col-1">
+
+            <h2>Company</h2>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="capabilities.html">Capabilities</a>
+            <a href="projects.html">Projects</a>
+            <a href="products.html">Products</a>
+            <a href="contactus.html">Contact</a>
+            </div>
+    
+            <div class="col-2">
+    
+                <h2>Contact Us</h2>
+                <p>Email: agovender1@csir.co.za</p>
+                <p>Telephone number: 012 841 3028</p>
+            </div>
+    
+            <div class="col-3">
+    
+                <h2>Follow Us</h2>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                <a href="#"><i class="fa-brands fa-x-twitter icons"></i>Twitter</a>
+                <a href="#"><i class="fa-brands fa-instagram" ></i>Instagram</a>
+                <a href="#"><i class="fa-brands fa-square-whatsapp"></i>WhatsApp</a>
+    
+            </div>
+    
+            <div class="col-4">
+
+                <h2>Address</h2>
+                <p> CSIR Pretoria Campus<br></br>
+                    Meiring Naude Road<br></br>
+                    Brummeria<br></br>
+                    Pretoria<br></br>
+                    Building 43</p>
+                
+            </div>
+    
+    
+        </footer> 
+
+</body>
+</html>

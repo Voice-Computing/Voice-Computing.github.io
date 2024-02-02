@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Computing website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9d1f54849f.js" crossorigin="anonymous"></script>
+
+<script>
+    function showMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").classList.remove("show");
+    }
+</script>
+
+
+
+<!--------back to top button------->
+
+
+
+<a href="#" id="backToTopBtn">Back to Top</a>
+
+<script>
+    // Implement a function to scroll back to the top smoothly
+    document.getElementById('backToTopBtn').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Add this script to your existing JavaScript
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var backToTopBtn = document.getElementById('backToTopBtn');
+
+    // Show the button when scrolled down, hide it when at the top
+    if (scrollPosition > 200) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+</script>
+
+
+<!---------------------read less button to additional text------------->
+
+
+<script>
+    function toggleText() {
+        var additionalText = document.getElementById("additionalText");
+        var readMoreBtn = document.querySelector('.read-more');
+        var readLessBtn = document.querySelector('.read-less');
+
+        if (additionalText.style.display === "none") {
+            // Display additional text
+            additionalText.style.display = "block";
+            readMoreBtn.style.display = "none";
+            readLessBtn.style.display = "inline";
+        } else {
+            // Hide additional text
+            additionalText.style.display = "none";
+            readMoreBtn.style.display = "inline";
+            readLessBtn.style.display = "none";
+        }
+    }
+
+    function scrollToAdditionalText() {
+        var additionalText = document.getElementById("additionalText");
+        var yOffset = -5000; // Adjust the yOffset as needed
+        var y = additionalText.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+</script>
+
+
+
+</head>
+<body>
+    <header style="background-color: black;">
+        <nav>
+
+            <!------Logo------>
+
+            <a href="index.html"><img src="images/CSIR Final_logo.png"></a>
+            <div class="nav-links" id="navLinks">
+
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+
+                <!---------list-------->
+
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
+                    <li><a href="aboutus.html"><i class="fa-regular fa-address-card"></i>ABOUT US</a></li>
+                    <li><a href="capabilities.html"><i class="fa-solid fa-users-gear"></i>CAPABILITIES</a></li>
+                    <li><a href="projects.html"><i class="fa-solid fa-list-check"></i>PROJECTS</a></li>
+                    <li><a href="products.html"><i class="fa-brands fa-product-hunt"></i>PRODUCTS</a></li>
+                    <li><a href="contactus.html"><i class="fa-solid fa-phone"></i>CONTACT US</a></li>
+                </ul>
+
+            </div>
+
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-------Capabilities------->
+
+        <div class="heading">
+            <h1>Capabilities</h1>
+            <p>Computing Research Group Capabilities</p>
+        </div>
+
+        <div class="text-content">
+            <h1>Capabilities</h1>
+            <p>
+                There are four micro teams within the Voice Computing Research Group, namely, ASR, TTS, CNLP, HCI & Accessibility.<br><br>
+                
+                ASR (Automatic Speech Recognition)
+                Team members: Dr Jaco Badenhorst (team lead), Dr Rynhardt Kruger, Mr Franco Mak and Mr Privolin Naidoo.
+                Automatic speech recognition (ASR) takes speech as input and converts it to text (which can be processed/analysed/mined in various ways). The ASR team aims to develop ASR systems for South Africa’s official languages.<br><br>
+
+                For well-resourced languages, the advent of deep architecture modelling resulted in significant error rate reductions. Since ASR systems are sensitive to the received speech input data, past training of robust ASR models has always required careful consideration of variations in recorded data. Signal variations such as different speaker accents and other conditions that affect the signal-to-noise ratio are important factors for model estimation.</p><br><br> <p Id="additionalText" style="display: none;">One of the advantages of deep architecture techniques is that these models now successfully incorporate speech information from larger, more diverse datasets than what was previously possible. In practice, it allows systems to effectively learn from more training examples containing different speaking styles and accents. Since the latest acoustic models are trained on hundreds of hours of speech incorporating multiple speaking styles and channels, ongoing work has been taking place to develop speech corpora for the South African languages. In South Africa, the African Speech Technology (AST), Lwazi and National Centre for Human Language Technology (NCHLT) projects relied on data collection to create speech resources for the indigenous languages.<br><br> During the Lwazi project telephone speech was collected (between four and ten hours per language), while the aim of the first NCHLT project was to collect 50 to 60 hours of orthographically transcribed, broadband speech in each of the country's 11 official languages.<br><br>Further development in acoustic modelling for local languages requires efficient data harvesting techniques. Usually, the main challenge in using existing data, for example, broadcast news recordings, is obtaining the accurate transcriptions required for acoustic model development. In the Data Harvesting project funded by the South African Centre for Language Resources (SADiLaR), such a data harvesting technique is being developed to produce sufficiently accurate transcriptions for acoustic training. To date, broadcast resources of additional acoustic data in six languages have been developed. Future plans include resource mining in other languages as well. These resources can be applied to current acoustic modelling approaches to deliver improved recognition performances. The SADiLaR Data Harvesting work, therefore adds to the ASR capability being developed in the Group.<br><br>As the acoustics improve, systems employing larger vocabularies become more tractable. Larger vocabulary systems require well-matched acoustics to minimise the chance of additional errors introduced by higher numbers of acoustically-related words in the language models. Eventually, a larger vocabulary automatic transcription capability unlocks various other speech applications such as the captioning of video data, searching for keywords in audio and analysis of audio data to extract topics of interest. State-of-the-art transcription systems are built using text corpora containing millions of words in size. These systems can transcribe arbitrary speech input as long as the words are within their vocabulary. There are, however, many examples of more constrained use cases where related text resources do exist for a particular stream of audio. For example, newspaper articles covering the same content as a news bulletin might be available.<br><br> A current expectation therefore is that the ASR resource development strategy also includes collation of in-domain texts to augment existing ASR data sets.
+                </p>
+
+
+                <button class="read-more" onclick="toggleText()">Read More</button>
+                <button class="read-less" onclick="toggleText()">Read Less</button>
+        
+        </div>
+
+
+        <div class="picture-container">
+            <img src="images/voice_recognition_virtual_assistant_artificial_intelligence_ai_thinkstock_889309652-100749545-large.jpg" alt="Description of the image">
+        </div>
+
+        <div class="row">
+            <div class="projects-col">
+                <h4>TTS (Text-to-Speech)</h4>
+                <p>Team members: Mr Aby Louw (team lead).<br><br>
+                    Text-to-speech systems (TTS) take text as input and generate synthetic speech as output.<br><br> The TTS team develops synthetic voices for South Africa’s written official language. The team has developed Qfrency, a commercial product that provides synthetic voices in eleven of the official languages of South Africa.
+                    </p>
+
+            </div>
+            <div class="projects-col">
+                <h4>CNLP (Controlled Natural Language Processing)</h4>
+                <p>Team members: Dr Laurette Marais (team lead) and Mr Sthembiso Mkhwanazi.<br><br>
+                 The CNLP team’s aim is to develop and apply computational grammars for the South African languages in research and development projects.<br><br> Our current focus is on education, specifically literacy and language learning. Our target audience currently comprises teachers and learners, but in principle, anyone interested in domain-specific, high-quality natural language understanding and generation might benefit from our work. A central focus of the team is the development of resource grammars for the South African languages.<br><br> These grammars enable us to rapidly develop application grammars for specific domains but have also shown promise in supporting machine learning natural language processing (NLP) for the South African languages via data annotation and augmentation.</p>
+
+            </div>
+            <div class="projects-col">
+                <h4>HCI (Human-Computer Interaction) & Accessibility</h4>
+                <p>Team members: Ms Ilana Wilken (TL), Ms Mamolapi Mothomoholo and Mr Willem van der Walt.<br><br>
+                    The HCI team’s main aim is to investigate and integrate the human element of human language technology (HLT) research. We do this by assisting the TTS, ASR and CNLP teams to develop technologies that are usable and acceptable to the end-users.<br><br> For projects with minimum viable products (MVPs) as the end goal, the HCI team is involved throughout the project. We draft requirement specifications, we develop wireframes, we create style guides to inform the look and feel of the products, we conduct internal testing and lastly, we conduct end-user testing through piloting. These steps are typically iterative, and the outputs are refined throughout the project’s lifecycle.<br><br>
+                    The HCI team is also involved in other projects in the field of digital humanities. These projects involve audits of HLTs or investigations into how South Africans perceive and use HLTs. These types of projects inform much of the work the other micro teams conduct since the outcomes of such projects provide valuable information for their team strategies.
+                    </p>
+
+            </div>
+        
+            
+        
+             
+
+    </main>
+
+
+    <footer>
+
+        <div class="col-1">
+
+            <h2>Company</h2>
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="capabilities.html">Capabilities</a>
+            <a href="projects.html">Projects</a>
+            <a href="products.html">Products</a>
+            <a href="contactus.html">Contact</a>
+        </div>
+
+        <div class="col-2">
+
+            <h2>Contact Us</h2>
+            <p>Email: agovender1@csir.co.za</p>
+            <p>Telephone number: 012 841 3028</p>
+        </div>
+
+        <div class="col-3">
+
+            <h2>Follow Us</h2>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+            <a href="#"><i class="fa-brands fa-x-twitter icons"></i>Twitter</a>
+            <a href="#"><i class="fa-brands fa-instagram" ></i>Instagram</a>
+            <a href="#"><i class="fa-brands fa-square-whatsapp"></i>WhatsApp</a>
+
+        </div>
+
+        <div class="col-4">
+
+            <h2>Address</h2>
+            <p>CSIR Pretoria Campus<br></br>
+               Meiring Naude Road<br></br>
+               Brummeria<br></br>
+               Pretoria<br></br>
+               Building 43</p>
+            
+        </div>
+
+
+
+    </footer>
+</body>
+</html>

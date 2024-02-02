@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Computing website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9d1f54849f.js" crossorigin="anonymous"></script>
+
+<script>
+    function showMenu() {
+        document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    function hideMenu() {
+        document.getElementById("navLinks").classList.remove("show");
+    }
+</script>
+
+<!--------back to top button------->
+
+
+<a href="#" id="backToTopBtn">Back to Top</a>
+
+<script>
+    // Implement a function to scroll back to the top smoothly
+    document.getElementById('backToTopBtn').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Add this script to your existing JavaScript
+window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var backToTopBtn = document.getElementById('backToTopBtn');
+
+    // Show the button when scrolled down, hide it when at the top
+    if (scrollPosition > 200) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+</script>
+
+    
+</head>
+<body>
+    <header style="background-color: black;">
+        <nav>
+
+            <!------Logo------>
+
+            <a href="index.html"><img src="images/CSIR Final_logo.png"></a>
+            <div class="nav-links" id="navLinks">
+
+                <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+
+                <!---------list-------->
+
+                <Ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
+                    <li><a href="aboutus.html"><i class="fa-regular fa-address-card"></i>ABOUT US</a></li>
+                    <li><a href="capabilities.html"><i class="fa-solid fa-users-gear"></i>CAPABILITIES</a></li>
+                    <li><a href="projects.html"><i class="fa-solid fa-list-check"></i>PROJECTS</a></li>
+                    <li><a href="products.html"><i class="fa-brands fa-product-hunt"></i>PRODUCTS</a></li>
+                    <li><a href="contactus.html"><i class="fa-solid fa-phone"></i>CONTACT US</a></li>
+                </Ul>
+
+            </div>
+
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!---------About Us---------------->
+
+        <div class="heading">
+            <h1>About us</h1>
+            <p>About Computing Research Group </p>
+        </div>
+                
+                <div class="text-content">
+                    <h2>About computing research group</h2>
+                    <p>South Africa has a diverse population with 12 official languages, differing levels of literacy, and a mixed economy. Language forms a crucial part of information exchange, and finding suitable modes and methods of improving language-based information exchange in such a diverse society is of paramount importance.<br><br>In South Africa, language barriers occur alongside and exacerbate literacy and socio-economic barriers. In order to produce a truly equitable society, where information exchange benefits all its members, language barriers must be addressed. 
+
+                    Such barriers may occur in the information exchange between members of society as they interact directly, or they may occur in ways that prevent segments of society from accessing widely available information, but out of reach due to the language in which it is available.<br><br>Language technology, and spoken language technology in particular, has the potential to address both kinds of language barriers.The Voice Computing Research Group (VCRG) is one of three research groups within the Networked Systems and Applications impact area, situated in the Next Generation Enterprises and Institutions cluster at the CSIR.<br> The VCRG has been researching and developing capabilities and technologies in the voice computing field over the past 20 years and focuses on localising human language technologies for South Africa’s written official languages.
+
+                    </p>
+                    
+
+                </div>
+
+                <div class="picture-csir">
+                    <img src="images/VC logo.jpg" alt="Description of the image">
+                </div>
+    
+  
+    </main>
+    <script>
+        function toggleText() {
+            var additionalText = document.getElementById("additionalText");
+            if (additionalText.style.display === "none") {
+                additionalText.style.display = "block";
+            } else {
+                additionalText.style.display = "none";
+            }
+        }
+    </script>
+
+            
+    
+   </body>
+
+   <footer>
+
+    <div class="col-1">
+
+        <h2>Company</h2>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="projects.html">Projects</a>
+        <a href="products.html">Products</a>
+        <a href="contactus.html">Contact</a>
+    </div>
+
+    <div class="col-2">
+
+        <h2>Contact Us</h2>
+        <p>Email: agovender1@csir.co.za</p>
+        <p>Telephone number: 012 841 3028</p>
+    </div>
+
+    <div class="col-3">
+
+        <h2>Follow Us</h2>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+        <a href="#"><i class="fa-brands fa-x-twitter icons"></i>Twitter</a>
+        <a href="#"><i class="fa-brands fa-instagram" ></i>Instagram</a>
+        <a href="#"><i class="fa-brands fa-square-whatsapp"></i>WhatsApp</a>
+
+    </div>
+
+    <div class="col-4">
+
+        <h2>Address</h2>
+        <p> CSIR Pretoria Campus<br></br>
+            Meiring Naude Road<br></br>
+            Brummeria<br></br>
+            Pretoria<br></br>
+            Building 43</p>
+        
+    </div>
+   
+   </footer> 
+
+</html>
+ 
